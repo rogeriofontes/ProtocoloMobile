@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Protocolo</string>
+    <string name="nome_protocolo">nome</string>
+    <string name="email_protocolo">email</string>
+    <string name="numeroProtocolo_protocolo">nomero_protocolo</string>
+    <string name="salvar">Salvar</string>
+</resources>
