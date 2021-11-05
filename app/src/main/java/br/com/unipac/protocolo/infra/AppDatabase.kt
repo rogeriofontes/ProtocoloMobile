@@ -7,13 +7,16 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import br.com.unipac.protocolo.converters.Converters
 import br.com.unipac.protocolo.model.Protocolo
+import br.com.unipac.protocolo.model.Usuario
 import br.com.unipac.protocolo.repositorio.ProtocoloRepositorio
+import br.com.unipac.protocolo.repositorio.UsuarioRepositorio
 
-@Database(entities = [Protocolo::class], version = 1, exportSchema = false)
+@Database(entities = [Protocolo::class, Usuario::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun ProtocoloRepositorio() : ProtocoloRepositorio
+    abstract fun UsuarioRepositorio() : UsuarioRepositorio
 
     companion object {
         private var INSTANCE: AppDatabase? = null

@@ -21,8 +21,9 @@ class MainActivity : AppCompatActivity() {
         var numeroProtocoloEdt = findViewById<EditText>(R.id.numeroProtocoloEdt)
         var btnSalvar = findViewById<Button>(R.id.btnSalvar)
 
-        getAll() //TODO - Enviar dados para recycleview
+        db?.UsuarioRepositorio()?.listar();
 
+        getAll() //TODO - Enviar dados para recycleview
         btnSalvar.setOnClickListener {
             var nomeProtocoloEdt = nomeProtocoloEdt.text.toString()
             var emailProtocoloEdt = emailProtocoloEdt.text.toString()
